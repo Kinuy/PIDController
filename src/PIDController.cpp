@@ -10,7 +10,7 @@ double PIDController::calculateCurrentSteeringValue(double targetValue, double m
 {
 	this->targetValue = targetValue;
 	this->measuredValue = measuredValue;
-	proportionalValue = targetValue - measuredValue;
+	proportionalValue = this->targetValue - this->measuredValue;
 
 	currentTime = std::chrono::steady_clock::now();
 	std::chrono::duration<double> elapsedTime = currentTime - lastTime;
