@@ -1,0 +1,17 @@
+# Visual Studio Studio
+/.vs
+**.sln
+**.vcxproj
+**.vcxproj.user
+**.txt
+**.exe
+
+# Conan
+/dependencies
+
+
+# Build output
+/build
+
+#temp folder for ref files
+/src/temp
