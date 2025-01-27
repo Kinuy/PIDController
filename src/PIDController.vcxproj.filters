@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="temp">
+      <UniqueIdentifier>{9B679E7C-879E-9F0D-308B-85101CA11B0F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Legend.h" />
+    <ClInclude Include="PIDController.h" />
+    <ClInclude Include="PlotLegend.h" />
+    <ClInclude Include="temp\Controller.h">
+      <Filter>temp</Filter>
+    </ClInclude>
+    <ClInclude Include="temp\MovingAverage.h">
+      <Filter>temp</Filter>
+    </ClInclude>
+    <ClInclude Include="temp\Sample.h">
+      <Filter>temp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PIDController.cpp" />
+    <ClCompile Include="PlotLegend.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="temp\Controller.cpp">
+      <Filter>temp</Filter>
+    </ClCompile>
+    <ClCompile Include="temp\MovingAverage.cpp">
+      <Filter>temp</Filter>
+    </ClCompile>
+    <ClCompile Include="temp\mainOld.cpp">
+      <Filter>temp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -3,6 +3,7 @@
 #include <chrono>
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "windows.h"
 
 using namespace std;
@@ -13,9 +14,10 @@ private:
 	long double timestamp;
 	double pGain, iGain, dGain;
 	double prevProportionalValue;
-	double integralValue, proportionalValue, derivativeValue;
+	double integralValue, proportionalValue, differentialValue;
 	double targetValue, measuredValue, steeringValue;
 	std::chrono::steady_clock::time_point lastTime, currentTime, startTime;
+	vector<double> vIntegralValues, vProportionalValues, vDifferentialValues, vMeasuredValues, vSteeringValues;
 
 
 public:
@@ -26,5 +28,10 @@ public:
 	void logger();
 	void getAndSetTimeStamp();
 	void initLogger();
+	vector<double> getProportionalValues() { return vProportionalValues; }
+	vector<double> getIntegralValues() { return vIntegralValues; }
+	vector<double> getDifferentialValues() { return vDifferentialValues; }
+	vector<double> getMeasuredValues() { return vMeasuredValues; }
+	vector<double> getSteeringValues() { return vSteeringValues; }
 
 };

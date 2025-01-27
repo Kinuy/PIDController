@@ -17,12 +17,18 @@ double PIDController::calculateCurrentSteeringValue(double targetValue, double m
 	double deltaTime = elapsedTime.count();
 	
 	integralValue += proportionalValue * deltaTime;
-	derivativeValue = (proportionalValue - prevProportionalValue) / deltaTime;
+	differentialValue = (proportionalValue - prevProportionalValue) / deltaTime;
 
-	steeringValue = (pGain * proportionalValue) + (iGain * integralValue) + (dGain * derivativeValue);
+	steeringValue = (pGain * proportionalValue) + (iGain * integralValue) + (dGain * differentialValue);
 
 	prevProportionalValue = proportionalValue;
 	lastTime = currentTime;
+
+	vProportionalValues.push_back(proportionalValue);
+	vIntegralValues.push_back(integralValue);
+	vDifferentialValues.push_back(differentialValue);
+	vMeasuredValues.push_back(measuredValue);
+	vSteeringValues.push_back(steeringValue);
 
 	return steeringValue;
 }

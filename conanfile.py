@@ -6,3 +6,4 @@ class ConanTutorialRecipe(ConanFile):
 
     def requirements(self):	
         self.requires("catch2/3.8.0")
+        self.requires("cvplot/1.2.2")
