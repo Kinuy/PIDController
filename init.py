@@ -15,3 +15,4 @@ if __name__ == '__main__':
     RunConan("Debug")
     RunConan("Release")
     RunPremake("vs2022")
+    #RundPremake("gmake")
